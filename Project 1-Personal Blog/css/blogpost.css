@@ -1,0 +1,215 @@
+@import "basic.css";
+@import "header.css";
+@import "footer.css";
+
+
+.container{
+   
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr .5fr .2fr;
+    grid-template-areas: "nav nav nav nav"
+                            "main main main main"
+                            "main main main main"
+                            "footer footer footer footer";
+    grid-gap:15px;
+    font-family: Arial, Helvetica, sans-serif; /*if u import a font, put it in quotes"*/
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:16px;
+    line-height: 1.2em;
+    }
+
+
+.outro{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-top: 5em;
+}
+.text>p:first-child{
+    padding-bottom: 5px;
+}
+.text{
+    line-height: 1px;
+    margin-left: 10px;
+}
+
+.pic{
+    width:85px;
+    height: 85px;
+    background-image: url("../images/profilepic.jpg") ;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.icon{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+
+}
+
+.icon div{
+    margin-right: 9px;
+
+
+}
+#copy{
+    text-align: center;
+}
+
+main{
+    grid-area: main;
+    padding: 0 5%;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+@media only screen and (max-width: 650px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr .9fr .2fr .2fr;
+        grid-template-areas:"nav"
+                            "main"
+                            "main"
+                            "footer"
+    }
+   
+    main{
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .outro{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3%;
+    }
+
+    .text>p{
+        text-align: center;
+    }
+ 
+    .icon div{
+        margin-top: 25px;
+    }
+
+    .pic{
+        width:55px;
+        height: 55px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+@import "basic.css";
+@import "header.css";
+@import "footer.css";
+
+
+.container{
+    background-color: #fff;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr .1fr;
+    grid-template-areas:    "nav nav nav nav"
+                            "info info info info"
+                            "info info info info"
+                            "footer footer footer footer";
+    grid-gap: 15px;
+    
+}
+
+main{
+    grid-area: info;
+    padding: 0 5%;
+    /*border: 1px solid red;
+}
+.subcontent{
+  
+    margin-bottom: 3px;
+}
+.outro{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    
+}
+.text>p:first-child{
+    padding-bottom: 5px;
+}
+.text{
+    line-height: 1px;
+    margin-left: 10px;
+}
+
+.pic{
+    width:85px;
+    height: 85px;
+    background-image: url("images/profilepic.jpg") ;
+   background-size: cover;
+   border-radius: 50%;
+}
+
+.icon{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    margin-top: 5px;;
+}
+
+.icon div{
+    margin-right: 9px;
+ 
+}
+
+
+
+@media screen and (max-width:688px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:.2fr 1.1fr .2fr;   /*remove all css imports and try again or try to make almost every section/div have a grid area */
+      /*  grid-template-areas:"nav"               or use the badass_template
+                            "info"
+                            "sharing"
+                            "footer";
+     
+     
+    }
+      
+}
+
+*/

@@ -1,0 +1,11 @@
+:root{
+    --main-radius:0px;
+    --main-padding:5px;
+    --cont-padding:5px;
+}
+body{
+    margin:0 10%;
+    font-size: 17px;
+    background-color: #c1c1c1;
+   
+}

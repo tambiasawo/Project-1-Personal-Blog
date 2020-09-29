@@ -1,0 +1,29 @@
+
+header{
+    grid-area: nav;
+    background-color: aquamarine;
+    padding-top: var(--main-padding);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header>div{
+    padding: 0 7px;
+}
+header>div>a{
+    text-decoration: none;
+    color:black
+}
+header>div>a:hover{
+    color:rgb(0, 89, 255);
+}
+
+@media only screen and (max-width: 480px) {
+    h1{
+        font-size:19px
+    }
+    h3{
+        font-size: 15px;
+    }
+}

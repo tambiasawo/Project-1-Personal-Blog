@@ -1,0 +1,89 @@
+@import "basic.css";
+@import "header.css";
+@import "sidebar.css";
+@import "footer.css";
+
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.25fr 1fr 1fr .25fr;
+    grid-template-areas: "nav nav nav nav"
+                            "main main main main"
+                            "main main main main"
+                            "footer footer footer footer";
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:16px;
+    line-height: 1.2em;
+    background-color: #fff;
+    grid-gap: 15px;  
+    border-radius: 5px;
+      
+    }
+
+main{
+    grid-area: main;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: 1fr .8fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "text text img";
+    grid-gap: 15px;    
+   
+}
+
+article{
+    grid-area: text;
+}
+
+.icon{
+    margin-top: 25px;
+}
+#copy{
+    text-align: center;
+}
+@media only screen and (max-width: 650px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr 1fr .2fr;
+        grid-template-areas:"nav"
+                            "main"
+                            "footer"
+    }
+    
+    main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr .2fr;
+        grid-template-areas:"text"
+                            "img";
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+  
+}
+@media only screen and (min-width: 651px) and (max-width: 1148px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr 1fr .2fr;
+        grid-template-areas:"nav"
+                            "main"
+                            "footer"
+    }
+    main{
+        overflow-x: hidden;
+        overflow-y: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:  1fr .5fr;
+        grid-template-areas:"text text"
+                            "img img";
+                        
+    }
+
+}
